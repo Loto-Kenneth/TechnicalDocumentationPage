@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Your Technical Documentation - Web Development Technologies</title>
+</head>
+<body>
+  <nav id="navbar">
+    <header>Documentation Navigation</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#HTML_(Hypertext_Markup_Language)">HTML (Hypertext Markup Language)</a>
+    <a class="nav-link" href="#CSS_(Cascading_Style_Sheets)">CSS (Cascading Style Sheets)</a>
+    <a class="nav-link" href="#JavaScript">JavaScript</a>
+    <a class="nav-link" href="#Conclusion">Conclusion</a>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>Welcome to our documentation on web development technologies! In this guide, we will explore the fundamental technologies that power the web and are essential for web developers.</p>
+      <p>Web development is an exciting field that allows you to create interactive and visually appealing websites.</p>
+      <p>Whether you're a beginner or an experienced developer, this documentation will provide valuable insights into web technologies.</p>
+      <code>//!DOCTYPE</code>
+    </section>
+    <section class="main-section" id="HTML_(Hypertext_Markup_Language)">
+      <header>HTML (Hypertext Markup Language)</header>
+      <p>HTML is the backbone of web development, responsible for structuring web pages. Learn about HTML elements, tags, and how to create web content using HTML.</p>
+      <code>&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;My Web Page&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;Hello World&lt;/h1&gt; &lt;/body&gt; &lt;/html&gt;</code>
+      <ul>
+        <li>HTML provides the structure for web pages.</li>
+        <li>HTML tags define elements and content on a web page.</li>
+      </ul>
+    </section>
+    <section class="main-section" id="CSS_(Cascading_Style_Sheets)">
+      <header>CSS (Cascading Style Sheets)</header>
+      <p>CSS is used for styling web pages, making them visually appealing. Explore CSS properties, selectors, and techniques to enhance the design of your websites.</p>
+      <p>With CSS, you can customize the layout, colors, and fonts of your web pages.</p>
+      <code>body { background-color: #f0f0f0; font-family: Arial, sans-serif; }</code>
+      <ul>
+        <li>CSS selectors target HTML elements for styling.</li>
+        <li>CSS properties define how elements should appear.</li>
+      </ul>
+    </section>
+    <section class="main-section" id="JavaScript">
+      <header>JavaScript</header>
+      <p>JavaScript is a dynamic programming language for adding interactivity and functionality to websites. Discover JavaScript's features and how to use it for web development.</p>
+      <p>JavaScript allows you to create responsive and interactive web applications.</p>
+      <code>function greet(name) { return 'Hello, ' + name + '!'; }</code>
+      <ul>
+        <li>JavaScript can respond to user actions and events.</li>
+        <li>JavaScript functions perform tasks and calculations in your web applications.</li>
+      </ul>
+    </section>
+    <section class="main-section" id="Conclusion">
+      <header>Conclusion</header>
+      <p>In this documentation, we've covered key web development technologies, including HTML, CSS, and JavaScript. These technologies are the building blocks of the web, enabling developers to create engaging and interactive websites.</p>
+      <p>Armed with this knowledge, you're well on your way to becoming a proficient web developer.</p>
+      <code>// Coding is Life!</code>
+    </section>
+  </main>
+  
+  <script>
+    function scrollToSection(sectionId) {
+      const section = document.querySelector(sectionId);
+      if (section) {
+        section.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const sectionId = link.getAttribute('href');
+        scrollToSection(sectionId);
+      });
+    });
+
+    // Function to scroll to the main document when clicked
+    function scrollToMain() {
+      document.querySelector('#main-doc').scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+
+    // Add an event listener to each navigation link to scroll to the main document
+    navLinks.forEach(link => {
+      link.addEventListener('click', scrollToMain);
+    });
+  </script>
+</body>
+</html>
